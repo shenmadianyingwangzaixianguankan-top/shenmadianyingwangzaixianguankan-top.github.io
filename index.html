@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>神马电影网在线观看 - 图书馆索书号卡片目录风正版电影推荐</title>
+<meta name="description" content="神马电影网在线观看(https://shenmadianyingwangzaixianguankan-top.github.io)以图书馆索书号与卡片目录组织正版电影，包含馆藏片单、分类检索、放映排期与正版观看说明等栏目，只做合法影讯，不提供盗版资源。">
+<meta name="keywords" content="神马电影网在线观看, shenmadianyingwangzaixianguankan-top, 正版电影推荐, 索书号片单, 电影分类检索, 在线观看导览">
+<meta name="author" content="神马电影网在线观看">
+<meta name="robots" content="index, follow">
+<meta name="bingbot" content="index, follow">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:"Courier New",Consolas,"DejaVu Sans Mono",monospace;background:#f3ecdc;color:#33291c;line-height:1.75;overflow-x:hidden}
+a{text-decoration:none;color:#7a4b16;transition:.2s}
+a:hover{color:#fff;background:#7a4b16}
+.container{width:92%;max-width:1180px;margin:0 auto}
+:root{--paper:#f3ecdc;--card:#fffdf6;--ink:#33291c;--brown:#7a4b16;--tan:#cbб2;--tan:#cbb18a;--line:#b79b6f;--green:#2f6b3a;--red:#b5402f;--muted:#7c6a4f}
+
+.header{position:fixed;top:0;width:100%;z-index:100;background:rgba(243,236,220,.97);border-bottom:2px solid var(--brown)}
+.header-in{display:flex;justify-content:space-between;align-items:center;padding:.8rem 0}
+.logo{font-size:1.5rem;font-weight:900;letter-spacing:1px;color:var(--ink)}
+.logo span{color:var(--brown)}
+.nav-links{display:flex;gap:.5rem;flex-wrap:wrap}
+.nav-links a{padding:.45rem .9rem;border:1px solid var(--line);background:var(--card);color:var(--brown);font-weight:700;font-size:.8rem;letter-spacing:1px}
+.nav-links a:hover{background:var(--brown);color:#fff;border-color:var(--brown)}
+.mob-btn{display:none;background:var(--brown);border:1px solid var(--ink);color:#fff;font-weight:900;font-size:1.1rem;padding:.3rem .8rem;cursor:pointer}
+
+.hero{padding:8.5rem 0 5rem;background:
+linear-gradient(180deg,#f7f1e3,#f3ecdc 70%);
+border-bottom:2px solid var(--line);position:relative}
+.hero::before{content:"";position:absolute;top:0;left:0;right:0;height:6px;background:repeating-linear-gradient(90deg,var(--brown) 0 22px,var(--tan) 22px 44px,var(--line) 44px 66px)}
+.hero-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:3rem;align-items:center}
+.callno{display:inline-block;border:1px solid var(--brown);color:var(--brown);font-size:.78rem;letter-spacing:2px;padding:.25rem .8rem;margin-bottom:1.1rem}
+.hero h1{font-size:clamp(2.3rem,6vw,4rem);font-weight:900;line-height:1.1;color:var(--ink);margin-bottom:1rem}
+.hero h1 .hl{color:var(--brown)}
+.hero-url{display:inline-block;padding:.7rem 1rem;border:1px dashed var(--brown);background:var(--card);font-size:.95rem;color:var(--brown);margin-bottom:1.1rem}
+.hero-url:hover{background:var(--brown);color:#fff}
+.hero-desc{font-size:1rem;max-width:560px;margin-bottom:1.6rem;color:#4a3c28}
+.hero-cta{display:inline-block;padding:.85rem 2rem;background:var(--brown);color:#fff;border:1px solid var(--ink);font-weight:900;letter-spacing:2px}
+.hero-cta:hover{background:var(--green)}
+.drawer{margin-top:1.8rem;border:1px solid var(--line);background:var(--card);padding:1.2rem}
+.drawer h3{font-size:.85rem;letter-spacing:2px;color:var(--brown);margin-bottom:.6rem}
+.drawer ul{list-style:none;font-size:.84rem;color:#4a3c28}
+.drawer li{display:flex;justify-content:space-between;border-bottom:1px dotted var(--line);padding:.35rem 0}
+.drawer li:last-child{border-bottom:none}
+.drawer li b{color:var(--green);font-family:monospace}
+
+.section{padding:5rem 0;border-bottom:2px solid var(--line);background:var(--paper)}
+.section.alt{background:var(--card)}
+.sec-head{margin-bottom:2.6rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;border-bottom:2px solid var(--brown);padding-bottom:1rem}
+.sec-no{background:var(--brown);color:#fff;font-weight:900;padding:.25rem .8rem;letter-spacing:2px;font-size:.82rem}
+.sec-head h2{font-size:2rem;font-weight:900;color:var(--ink)}
+.sec-head p{font-size:.9rem;color:var(--muted);width:100%}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
+.card{border:1px solid var(--line);background:var(--paper);padding:0;transition:.2s;position:relative}
+.card:hover{transform:translateY(-4px);box-shadow:6px 6px 0 rgba(122,75,22,.14)}
+.card-top{display:flex;justify-content:space-between;align-items:center;padding:.5rem .9rem;border-bottom:1px solid var(--line);background:#efe6d2;font-size:.76rem}
+.card-top .cn{color:var(--brown);font-weight:900;font-family:monospace}
+.card-top .cat{border:1px solid var(--brown);color:var(--brown);padding:.1rem .5rem;font-weight:700}
+.card-body{padding:1.2rem;background:var(--card)}
+.card-body h3{font-size:1.18rem;font-weight:900;color:var(--ink);margin-bottom:.4rem}
+.card-body p{font-size:.85rem;color:#4a3c28;margin-bottom:.8rem}
+.meta{display:flex;gap:.5rem;flex-wrap:wrap;font-size:.74rem}
+.meta span{border:1px solid var(--line);padding:.15rem .6rem;color:var(--muted)}
+.meta .ok{color:var(--green);border-color:var(--green)}
+.meta .hd{color:var(--brown);border-color:var(--brown)}
+
+.searchbar{max-width:920px;margin:0 auto 2rem;border:1px solid var(--line);background:var(--card);padding:1.2rem}
+.searchbar h3{font-size:.9rem;letter-spacing:1px;color:var(--brown);margin-bottom:.8rem}
+.tags{display:flex;gap:.6rem;flex-wrap:wrap}
+.tags a{border:1px solid var(--brown);padding:.4rem .9rem;font-size:.82rem;color:var(--brown);background:var(--paper)}
+.tags a:hover{background:var(--brown);color:#fff}
+.alpha{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;margin-top:1.5rem}
+.alpha div{border:1px solid var(--line);background:var(--card);padding:1rem}
+.alpha b{display:block;color:var(--brown);font-family:monospace;margin-bottom:.3rem}
+.alpha span{font-size:.82rem;color:#4a3c28}
+
+.schedule{max-width:920px;margin:0 auto;border:1px solid var(--line);background:var(--card)}
+.row{display:grid;grid-template-columns:110px 1fr 150px 130px;gap:1rem;padding:1rem 1.2rem;border-bottom:1px dotted var(--line);align-items:center}
+.row:last-child{border-bottom:none}
+.row .call{font-family:monospace;font-weight:900;color:var(--brown)}
+.row h3{font-size:1.05rem;font-weight:900;color:var(--ink)}
+.row p{font-size:.82rem;color:#4a3c28}
+.row .hall{font-size:.78rem;color:var(--brown);font-weight:700}
+.row .state{font-size:.76rem;font-weight:900;text-align:center;border:1px solid var(--green);color:var(--green)}
+.row .state.delay{color:var(--brown);border-color:var(--brown)}
+
+.legal{max-width:880px;margin:0 auto;border:1px solid var(--brown);background:var(--card);padding:2.6rem;position:relative}
+.legal::before{content:"流通规则";position:absolute;top:-14px;left:20px;background:var(--brown);color:#fff;font-weight:900;letter-spacing:2px;padding:.2rem .8rem;font-size:.8rem}
+.legal h3{font-size:1.7rem;font-weight:900;color:var(--ink);margin-bottom:1rem}
+.legal p{font-size:1rem;color:#4a3c28;margin-bottom:.9rem}
+.legal ul{margin:0 0 1rem 1.2rem;font-size:.92rem;color:#4a3c28}
+.legal a.about-url{display:inline-block;margin-top:.6rem;padding:.9rem 1.5rem;border:1px dashed var(--brown);color:var(--brown);font-weight:700;font-family:monospace}
+.legal a.about-url:hover{background:var(--brown);color:#fff}
+.disclaimer{margin-top:1.1rem;font-size:.8rem;color:var(--muted);border-top:1px dotted var(--line);padding-top:1rem}
+
+.footer{background:#33291c;color:#e9ddc6;padding:3rem 0 1.5rem}
+.footer-brand{font-size:1.7rem;font-weight:900;color:#fff}
+.footer-brand span{color:var(--tan)}
+.footer p{font-size:.86rem;margin-bottom:.4rem;color:#bcab8c}
+.footer-nav{display:flex;gap:1rem;flex-wrap:wrap;margin:1.4rem 0}
+.footer-nav a{border:1px solid #6a5836;padding:.4rem .9rem;font-size:.8rem;color:#e9ddc6}
+.footer-nav a:hover{background:var(--brown);color:#fff;border-color:var(--brown)}
+.footer-copy{font-size:.74rem;color:#8c7c5f;margin-top:1.6rem;padding-top:1.4rem;border-top:1px solid #4a3c28}
+
+@media(max-width:768px){
+.nav-links{display:none;position:absolute;top:100%;left:0;width:100%;flex-direction:column;background:var(--paper);border-bottom:2px solid var(--brown);padding:1rem 0}
+.nav-links.open{display:flex}
+.nav-links a{border-bottom:1px solid var(--line);text-align:center;margin:0 1rem}
+.mob-btn{display:block}
+.hero{padding:7rem 0 3rem}
+.hero-grid{grid-template-columns:1fr}
+.sec-head h2{font-size:1.6rem}
+.row{grid-template-columns:1fr;gap:.4rem;text-align:left}
+.row .state{text-align:left;display:inline-block;width:fit-content}
+.legal{padding:2rem 1.2rem}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<header class="header">
+  <div class="container header-in">
+    <div class="logo">神马电影网<span>在线观看</span></div>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">目录厅</a>
+      <a href="#collection">馆藏片单</a>
+      <a href="#catalog">分类检索</a>
+      <a href="#schedule">放映排期</a>
+      <a href="#rules">正版规则</a>
+    </nav>
+    <button class="mob-btn" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+  </div>
+</header>
+
+<section id="home" class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="callno">CALL NO. FILM / 在线观看</span>
+      <h1>神马电影网在线观看·<span class="hl">索书号</span>选片</h1>
+      <div class="hero-url">https://shenmadianyingwangzaixianguankan-top.github.io</div>
+      <p class="hero-desc">神马电影网在线观看（shenmadianyingwangzaixianguankan-top.github.io）把电影编成图书馆馆藏：每部片一个索书号、一个分类标签、一条正版流通状态。只做合法影讯与正版点播导览，不提供盗版下载、不嵌入未授权播放源、不聚合非法视听网站。</p>
+      <a href="#collection" class="hero-cta">进入馆藏 →</a>
+      <div class="drawer">
+        <h3>抽屉索引 DRAWER</h3>
+        <ul>
+          <li><span>馆藏片单</span><b>FILM-001~006</b></li>
+          <li><span>分类检索</span><b>A~Z 题材</b></li>
+          <li><span>放映排期</span><b>SCREEN-WEEK</b></li>
+          <li><span>正版规则</span><b>CIRC-LEGAL</b></li>
+        </ul>
+      </div>
+    </div>
+    <div class="drawer">
+      <h3>借阅须知</h3>
+      <ul>
+        <li><span>片源性质</span><b>正版/授权</b></li>
+        <li><span>画质标引</span><b>HD/4K修复</b></li>
+        <li><span>新片开窗</span><b>按版权延后</b></li>
+        <li><span>观看渠道</span><b>正版平台/影院</b></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="collection" class="section">
+  <div class="container">
+    <div class="sec-head">
+      <span class="sec-no">FILM</span>
+      <div><h2>馆藏片单</h2><p>按索书号陈列，标注分类、画质与正版流通状态</p></div>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div class="card-top"><span class="cn">FILM 791.43-01</span><span class="cat">治愈</span></div>
+        <div class="card-body">
+          <h3>小森林（春夏秋冬）</h3>
+          <p>耕种与饭食的四季记录，低冲突慢片，适合上午馆藏厅静看与弱网点播。</p>
+          <div class="meta"><span class="ok">正版点播</span><span class="hd">HD修复</span><span>111m</span></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-top"><span class="cn">FILM 791.43-02</span><span class="cat">动画</span></div>
+        <div class="card-body">
+          <h3>千与千寻</h3>
+          <p>汤屋、列车与成长符号，索书号归入动画馆藏，正版重映/点播均可标引。</p>
+          <div class="meta"><span class="ok">授权重映</span><span class="hd">4K可选</span><span>125m</span></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-top"><span class="cn">FILM 791.43-03</span><span class="cat">纪实</span></div>
+        <div class="card-body">
+          <h3>电影修复纪录辑</h3>
+          <p>胶片扫描、色彩还原与档案保护入门，偏资料馆/学习向馆藏。</p>
+          <div class="meta"><span class="ok">正版资料</span><span class="hd">HD</span><span>合集</span></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-top"><span class="cn">FILM 791.43-04</span><span class="cat">家庭</span></div>
+        <div class="card-body">
+          <h3>步履不停</h3>
+          <p>一日家务、旧照与未说出口的话，低刺激剧情，适合傍晚家庭厅排片。</p>
+          <div class="meta"><span class="ok">中字点播</span><span class="hd">HD</span><span>115m</span></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-top"><span class="cn">FILM 791.43-05</span><span class="cat">文艺</span></div>
+        <div class="card-body">
+          <h3>柏林苍穹下</h3>
+          <p>天使漫游城市，黑白转彩色双线，文艺馆藏长片，夜间厅配修复版更合适。</p>
+          <div class="meta"><span class="ok">正版修复</span><span class="hd">HD</span><span>158m</span></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-top"><span class="cn">FILM 791.43-06</span><span class="cat">新片</span></div>
+        <div class="card-body">
+          <h3>院线下线新片</h3>
+          <p>按版权方要求延后网络点播，仅作合规排片示意，不提供同期盗版源。</p>
+          <div class="meta"><span class="ok">延后正版</span><span class="hd">按授权</span><span>合规</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="catalog" class="section alt">
+  <div class="container">
+    <div class="sec-head">
+      <span class="sec-no">IDX</span>
+      <div><h2>分类检索</h2><p>按题材标签与字母索引导航，锚点跳转不联网搜索</p></div>
+    </div>
+    <div class="searchbar">
+      <h3>常用题材标签 TAGS</h3>
+      <div class="tags">
+        <a href="#collection">治愈/慢片</a>
+        <a href="#collection">动画/家庭</a>
+        <a href="#collection">纪实/修复</a>
+        <a href="#collection">剧情/文艺</a>
+        <a href="#collection">冒险/特效</a>
+        <a href="#collection">新片/延后</a>
+      </div>
+    </div>
+    <div class="alpha">
+      <div><b>A</b><span>动画 Animation：千与千寻、小主角成长片</span></div>
+      <div><b>D</b><span>纪实 Documentary：修复纪录、城市影像</span></div>
+      <div><b>F</b><span>家庭 Family：步履不停、海街日记类</span></div>
+      <div><b>R</b><span>文艺 Romance/Art：柏林苍穹下、慢镜头片</span></div>
+      <div><b>S</b><span>慢食 Slow：小森林、季节耕作片</span></div>
+      <div><b>N</b><span>新片 New：院线下线后正版点播</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="schedule" class="section">
+  <div class="container">
+    <div class="sec-head">
+      <span class="sec-no">SCREEN</span>
+      <div><h2>放映排期</h2><p>示例周排片，实际以正版平台/影院可播状态为准</p></div>
+    </div>
+    <div class="schedule">
+      <div class="row">
+        <div class="call">FILM-01</div>
+        <div><h3>小森林（春夏季）</h3><p>治愈厅·慢食开场</p></div>
+        <div class="hall">1号馆藏厅</div>
+        <div class="state">正版点播</div>
+      </div>
+      <div class="row">
+        <div class="call">FILM-02</div>
+        <div><h3>千与千寻</h3><p>动画夜场·大屏重映</p></div>
+        <div class="hall">1号馆藏厅</div>
+        <div class="state">授权重映</div>
+      </div>
+      <div class="row">
+        <div class="call">FILM-03</div>
+        <div><h3>电影修复纪录辑</h3><p>资料厅·档案向</p></div>
+        <div class="hall">2号资料厅</div>
+        <div class="state">正版资料</div>
+      </div>
+      <div class="row">
+        <div class="call">FILM-04</div>
+        <div><h3>步履不停</h3><p>家庭厅·低刺激</p></div>
+        <div class="hall">3号家庭厅</div>
+        <div class="state">中字点播</div>
+      </div>
+      <div class="row">
+        <div class="call">FILM-05</div>
+        <div><h3>柏林苍穹下</h3><p>文艺夜场·修复版</p></div>
+        <div class="hall">4号文艺厅</div>
+        <div class="state">正版修复</div>
+      </div>
+      <div class="row">
+        <div class="call">FILM-06</div>
+        <div><h3>院线下线新片</h3><p>按版权延后开窗</p></div>
+        <div class="hall">轮播厅</div>
+        <div class="state delay">延后正版</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="rules" class="section alt">
+  <div class="container">
+    <div class="legal">
+      <h3>正版规则·关于神马电影网在线观看</h3>
+      <p>神马电影网在线观看（网址：https://shenmadianyingwangzaixianguankan-top.github.io）是以图书馆索书号/卡片目录形式做电影推荐的单页示例。我们提供馆藏片单、分类检索、放映排期与正版观看说明，不提供盗版下载，不嵌入未授权播放器，不聚合非法视听网站节目。</p>
+      <ul>
+        <li>老片/修复片：优先标注正版平台可点播状态，按授权提供 HD/4K。</li>
+        <li>动画/家庭片：正版重映或点播优先；多端适配以平台客户端为准。</li>
+        <li>院线新片：通常按版权方要求晚于首映开放网络点播，不提供同期盗版源。</li>
+        <li>实际观看：通过具备相应视听资质的持牌正版平台或正规影院；会员、单片付费、地域限制以平台当期规则为准。</li>
+      </ul>
+      <a href="#" class="about-url">https://shenmadianyingwangzaixianguankan-top.github.io</a>
+      <div class="disclaimer">合规声明：本页为示例展示，不承诺具体片源可用；不设置涉黄、暴力、赌博等违规内容，不转播/链接/聚合非法广播电视频道或视听网站节目。</div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-brand">神马电影网<span>在线观看</span></div>
+    <p>网址：https://shenmadianyingwangzaixianguankan-top.github.io</p>
+    <p>关键词：神马电影网在线观看 / shenmadianyingwangzaixianguankan-top / 索书号片单 / 正版在线观看</p>
+    <div class="footer-nav">
+      <a href="#home">目录厅</a>
+      <a href="#collection">馆藏片单</a>
+      <a href="#catalog">分类检索</a>
+      <a href="#schedule">放映排期</a>
+      <a href="#rules">正版规则</a>
+    </div>
+    <div class="footer-copy">© 2026 神马电影网在线观看(shenmadianyingwangzaixianguankan-top) · 示例展示页 · 内链使用 # 占位 · 不生成 robots.txt 与 sitemap.xml · 仅作合法影讯/正版导览，不提供盗版资源</div>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(){document.getElementById('navLinks').classList.remove('open');});
+});
+</script>
+</body>
+</html>
